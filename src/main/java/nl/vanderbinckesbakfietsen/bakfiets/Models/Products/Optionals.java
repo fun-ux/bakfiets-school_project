@@ -1,11 +1,9 @@
 package nl.vanderbinckesbakfietsen.bakfiets.Models.Products;
 
-        import javax.persistence.Entity;
-        import javax.persistence.GeneratedValue;
-        import javax.persistence.GenerationType;
-        import javax.persistence.Id;
+        import javax.persistence.*;
 
 @Entity
+@Table(name = "Optionals")
 public class Optionals {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
