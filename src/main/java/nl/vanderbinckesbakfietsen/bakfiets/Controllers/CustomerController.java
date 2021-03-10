@@ -38,7 +38,7 @@ public class CustomerController {
     public CustomerController() {}
 
     //products
-    @GetMapping("/listproducts")
+   /* @GetMapping("/listproducts")
     public Iterable<Product> getProducts() {
         return productservice.findAll();
     }
@@ -61,7 +61,7 @@ public class CustomerController {
             form.add(product);
         }
         return form;
-    }
+    }*/
 
     @PostMapping("/save_calc")
     public ModelAndView getProductByNaam(@ModelAttribute ResultForm resultForm, ModelAndView model){
