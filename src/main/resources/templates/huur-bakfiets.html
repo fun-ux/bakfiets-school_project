@@ -19,6 +19,14 @@
         display: none !important
       }
     }
+
+    #q2{display:none;}
+
+    @media screen and (max-width: 746px) {
+      .div-block-2 {
+        margin-top: 40px;
+      }
+    }
   </style>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Great+Vibes:400%7CChanga+One:400,400italic"
     media="all">
@@ -206,10 +214,10 @@
           </div>
           <div class="w-col w-col-6">
             <div class="div-block-2">
-              <a id="goback_optional" href="#" class="option_goback w-button">Vorige</a>
+              <a id="goback_optional" href="#" class="option_goback w-button" style="display: inline-block;padding-right: 50px;padding-left: 50px;background-color: #9a9ea2;font-size: 20px;line-height: 25px;">Vorige</a>
               <a id="caclute_prijs" href="#" class="button-3 w-button">Reserveer</a>
-              <div class="w-embed"><input type="submit" value="Reserveer" form="regForm"
-                  style="padding: 9px 15px;background-color: #3898EC;color: white;border: 0;line-height: inherit;text-decoration: none;cursor: pointer;border-radius: 0;display: block;width: 100%;">
+              <div class="w-embed" style="font-size: 24px;line-height: 31px;"><input type="submit" value="Reserveer" form="regForm"
+                  style="padding: 9px 15px;background-color: #09E372;color: white;border: 0;line-height: inherit;text-decoration: none;cursor: pointer;border-radius: 0;display: block;width: 100%;">
               </div>
             </div>
           </div>
@@ -358,6 +366,10 @@
   <script src="https://cdn.jsdelivr.net/gh/fun-ux/bakfietsen-vanderbincks@1.4/eerste-vraag.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/fun-ux/bakfietsen-vanderbincks@1.4/tweede-vraag.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/fun-ux/bakfietsen-vanderbincks@1.4/derde-vraag.js"></script>
+
+  <script>
+    $("#q2").hide();
+  </script>
 </body>
 
 </html>
