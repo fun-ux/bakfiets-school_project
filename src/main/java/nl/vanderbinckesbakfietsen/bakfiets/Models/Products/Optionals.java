@@ -13,16 +13,18 @@ public class Optionals {
     private Double Prijs;
     private String productDescription;
     private String uniqueName;
+    private String image;
 
 
     protected Optionals() {
     }
 
-    public Optionals(String naam, Double prijs, String productDescription, String uniqueName) {
+    public Optionals(String naam, Double prijs, String productDescription, String uniqueName, String image) {
         this.Naam = naam;
         this.Prijs = prijs;
         this.productDescription = productDescription;
         this.uniqueName = uniqueName;
+        this.image = image;
     }
 
     public int getProductId() {
@@ -65,6 +67,14 @@ public class Optionals {
         this.uniqueName = uniqueName;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
     @Override
     public String toString() {
         return "Optionals{" +
@@ -73,6 +83,7 @@ public class Optionals {
                 ", Prijs=" + Prijs +
                 ", productDescription='" + productDescription + '\'' +
                 ", uniqueName='" + uniqueName + '\'' +
+                ", image='" + image + '\'' +
                 '}';
     }
 }
