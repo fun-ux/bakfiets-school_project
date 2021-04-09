@@ -23,7 +23,7 @@ public class HelloController {
     @Autowired
     private OptionalsService optionalsService;
 
-    @GetMapping("/")
+    @GetMapping("/huur-bakfiets")
     public String handle(Model model) {
 
 
@@ -34,6 +34,20 @@ public class HelloController {
 
         model.addAttribute("form", new ResultForm());
 
-        return "hello2";
+        return "huur-bakfiets";
+    }
+
+    @GetMapping("/")
+    public String handle_home(Model model) {
+
+
+       /* model.addAttribute("huur", huurTariefService.findAll());
+        model.addAttribute("bakfiets", productservice.findAll());
+        model.addAttribute("options", optionalsService.findAll());
+
+
+        model.addAttribute("form", new ResultForm());*/
+
+        return "index";
     }
 }

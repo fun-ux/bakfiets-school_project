@@ -106,7 +106,7 @@
             <select name="type_bakfiets" id="type_bakfiets" th:field="*{type_bakfiets}">
 
 
-                <option th:each="bakfietsen : ${bakfiets}" th:value="${bakfietsen.Naam}" th:text="${bakfietsen.Naam} + ' - €' +  ${#numbers.formatDecimal(bakfietsen.Prijs, 0, 'COMMA', 2, 'COMMA')}  ">
+                <option th:each="bakfietsen : ${bakfiets}" th:value="${bakfietsen.Naam}" th:attr="bakfiets-image=${bakfietsen.image}" th:text="${bakfietsen.Naam} + ' - €' +  ${#numbers.formatDecimal(bakfietsen.Prijs, 0, 'COMMA', 2, 'COMMA')}  ">
                 </option>
 
             </select>
@@ -117,7 +117,7 @@
 
 
         <p th:each="option : ${options}">
-            <input type="checkbox"  th:name="${option.uniqueName}"  th:value="${option.Naam}">
+            <input type="checkbox"  th:name="${option.uniqueName}" th:attr="option-image=${option.image}"  th:value="${option.Naam}">
             <label th:for="${option.uniqueName}" th:text="${option.Naam} + ' - €' + ${#numbers.formatDecimal(option.Prijs, 0, 'COMMA', 2, 'COMMA')} " >  </label>
         </p>
 
